@@ -1,0 +1,89 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #e9e9e9;
+    color: #333;
+}
+
+#nav-container {
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    text-align: center;
+}
+#nav-title {
+    margin-top: 11px;
+    font-size: 24px;
+    color: #555;
+}
+
+
+
+#main-container {
+    margin-top: 48px; /* nav-container height */
+    padding-top: 24px;
+}
+
+#main-header {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    margin: 12px 0 24px 0;
+    color: #646464;
+}
+
+#large-button-container {
+    width: 100%;
+}
+
+.large-button {
+    width: 100%;
+    margin: 0 0 2px 0;
+    height: 54px;
+    color: #e64441;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 white;
+    transition: 0.2s;
+    background-color: #f4f4f4;
+    padding-left: 48px;
+}
+.large-button:visited {
+    color: #e64441;
+}
+.large-button:hover, .large-button:active {
+    background-color: white;
+}
+
+.large-button-icon {
+    float: left;
+    width: 42px;
+    height: 42px;
+    margin: 6px;
+    background-color: #e64441;
+    border-radius: 3px;
+}
+.large-button-label {
+    float: left;
+    padding-top: 18px;
+    margin-left: 8px;
+}
+
+#question-button {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e64441;
+}
