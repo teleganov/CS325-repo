@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>FreeSpace</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+
+<body>
+<div id="nav-container">
+  <div id="nav-title">Find a Class</div>
+</div>
+
+<div id="main-container">
+
+<div class="container">
+  <form>
+  	<div class="form-group" align="center">
+  		<label>Course Subject</label>
+  		<br><br>
+  		<select>
+  			<option>First</option>
+  			<option>Second</option>
+  		</select>
+    </div>
+
+    <br><hr><br>
+
+    <div class="form-group" align="center">
+  		<label>Course Number: </label>
+  		<input type="number" placeholder="Enter number">
+  		<br>
+  		<p>AND/OR</p>
+  		<label>Course Title: </label>
+  		<input type="text" placeholder="Enter name">	
+  	</div>
+
+  	 <br><hr><br>
+
+  	 <div class="form-group" align="center">
+  		<label>Section Number</label>
+  		<br><br>
+  		<select>
+  			<option>N/A</option>
+  		</select>
+  		<br><br><hr><br>
+  		<button type="submit" class="btn btn-default">Submit</button>
+  		<br><br><br><br><br>
+    </div>
+  </form>
+</div>
+
+<<<<<<< HEAD
+=======
+  <div id="question-button">?</div>
+
+  <a href="index.html">
+  	<div id="back-button">&larr;</div>
+  </a>
+
+  <a href="index.html">
+    <div id="home-button"><img src="home-512px.svg" alt="Home" height="24" width="24"></div>
+  </a>
+
+>>>>>>> 04a97cc5604f5180249029f832ebf6aaf5f4db15
+</div>
+
+<a href="help.html" id="question-button">?</a>
+</body>
+</html>

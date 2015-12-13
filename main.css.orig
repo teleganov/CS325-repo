@@ -1,11 +1,7 @@
-html {
-    max-width: 100%;
-}
 body {
     font-family: "Lato", sans-serif;
     background-color: #e9e9e9;
     color: #333;
-    overflow: scroll;
 }
 
 #nav-container {
@@ -28,7 +24,6 @@ body {
 #main-container {
     margin-top: 48px; /* nav-container height */
     padding-top: 24px;
-    overflow: scroll;
 }
 
 #main-header {
@@ -91,6 +86,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: #e64441;
+<<<<<<< HEAD
     text-decoration: none;
     transition: 0.2s;
 }
@@ -99,6 +95,8 @@ body {
 }
 a:visited {
     color: inherit;
+}
+=======
 }
 
 #back-button {
@@ -115,7 +113,6 @@ a:visited {
     font-size: 24px;
     font-weight: 700;
     color: #e64441;
-    transition: 0.2s;
 }
 
 #back-button a:link,
@@ -140,7 +137,6 @@ a:visited {
     font-size: 24px;
     font-weight: 700;
     color: #e64441;
-    transition: 0.2s;
 }
 
 #home-button a:link,
@@ -149,95 +145,4 @@ a:visited {
     color: #e64441;
     text-decoration: none;
 }
-
-#map-north-container {
-    background-image: url('google_map_north.jpg');
-    width: 1094px;
-    height: 680px;
-    display: inline-block;
-}
-
-#map-south-container {
-    background-image: url('google_map_south.jpg');
-    width: 1015px;
-    height: 962px;
-}
-
-.map-invis-button {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    background-color: rgba(52, 185, 91, 0.5);
-}
-
-#map-compsci-button {
-    width: 78px;
-    height: 58px;
-    top: 248px;
-    left: 187px;
-}
-
-#map-goessman-button {
-    width: 86px;
-    height: 83px;
-    top: 416px;
-    left: 344px;
-}
-
-#map-isb-button {
-    width: 59px;
-    height: 85px;
-    top: 477px;
-    left: 454px;
-}
-
-#map-goodell-button {
-    width: 66px;
-    height: 58px;
-    top: 254px;
-    left: 227px;
-}
-
-#map-isenberg-button {
-    width: 64px;
-    height: 106px;
-    top: 412px;
-    left: 442px;
-}
-
-#map-prince-button {
-    width: 38px;
-    height: 79px;
-    top: 663px;
-    left: 124px;
-}
-
-.map-building-container {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-}
-
-.submit-button {
-    width: 100px;
-    height: 32px;
-    display: block;
-    text-align: center;
-    padding-top: 8px;
-    background-color: #e64441;
-    color: white;
-    text-decoration: none;
-    border-radius: 2px;
-}
-.submit-button:visited {
-    color: white;
-}
-
-.radio-horiz {
-    margin: 0 4px 0 12px;
-}
-
-.number-input-box {
-    max-width: 48px;
-    text-align: right;
-}
+>>>>>>> 04a97cc5604f5180249029f832ebf6aaf5f4db15

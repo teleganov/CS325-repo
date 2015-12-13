@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>FreeSpace</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+
+<body>
+<div id="nav-container">
+  <div id="nav-title"><span style="font-weight:400;">Free</span><span style="font-weight:700;">Space</span></div>
+</div>
+
+<div id="main-container">
+  <div id="large-button-container">
+    <a href="find-open-room-1.html" class="large-button clearfix">
+      <div class="large-button-icon"></div><div class="large-button-label">Find an Open Room</div>
+    </a>
+    <a href="find-class-1.html" class="large-button clearfix">
+      <div class="large-button-icon"></div><div class="large-button-label">Find a Class</div>
+    </a>
+    <a href="view-map.html" class="large-button clearfix">
+      <div class="large-button-icon"></div><div class="large-button-label">View Map</div>
+    </a>
+  </div>
+<<<<<<< HEAD
+=======
+  
+  <div id="question-button">?</div>
+>>>>>>> 04a97cc5604f5180249029f832ebf6aaf5f4db15
+
+</div>
+
+<a href="help.html" id="question-button">?</a>
+</body>
+</html>

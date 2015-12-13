@@ -10,23 +10,27 @@
 
 <body>
 <div id="nav-container">
-  <div id="nav-title">View Map</div>
+  <div id="nav-title">Find an Open Room</div>
 </div>
 
-<div id="main-container" style="padding-top: 0;">
-  <div id="map-north-container">
+<div id="main-container">
 
-  </div>
+
+<<<<<<< HEAD
+=======
+  <div id="question-button">?</div>
+
+  <a href="index.html">
+  	<div id="back-button">&larr;</div>
+  </a>
+
+  <a href="index.html">
+    <div id="home-button"><img src="home-512px.svg" alt="Home" height="24" width="24"></div>
+  </a>
+
+>>>>>>> 04a97cc5604f5180249029f832ebf6aaf5f4db15
 </div>
 
 <a href="help.html" id="question-button">?</a>
-
-<a href="index.html">
-  <div id="back-button">&larr;</div>
-</a>
-
-<a href="index.html">
-  <div id="home-button"><img src="home-512px.svg" alt="Home" height="24" width="24"></div>
-</a>
 </body>
 </html>
