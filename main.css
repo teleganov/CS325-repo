@@ -241,3 +241,16 @@ a:visited {
     max-width: 48px;
     text-align: right;
 }
+
+#go-inside-button {
+    position: fixed;
+    display: block;
+    width: 100%;
+    background-color: white;
+    color: #e64441;
+    text-decoration: none;
+    top: 48px;
+    height: 36px;
+    text-align: center;
+    padding-top: 9px;
+}
