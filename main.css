@@ -110,3 +110,26 @@ body {
     color: #e64441;
     text-decoration: none;
 }
+
+#home-button {
+    position: fixed;
+    bottom: 8px;
+    left: 50%;
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e64441;
+}
+
+#home-button a:link,
+#home-button a:visited,
+#home-button a:hover {
+    color: #e64441;
+    text-decoration: none;
+}
