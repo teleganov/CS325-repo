@@ -69,7 +69,12 @@ body {
     height: 42px;
     margin: 6px;
     background-color: #e64441;
-    border-radius: 3px;
+    border-radius: 24px;
+    text-align: center;
+}
+.large-button-img {
+    width: 100%;
+    height: auto;
 }
 .large-button-label {
     float: left;
