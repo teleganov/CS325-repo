@@ -172,7 +172,7 @@ a:visited {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    background-color: rgba(52, 185, 91, 0.5);
+    background: none;
 }
 
 #map-compsci-button {
