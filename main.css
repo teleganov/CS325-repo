@@ -15,6 +15,7 @@ body {
     left: 0;
     background-color: #e64441;
     text-align: center;
+    z-index: 999;
 }
 #nav-title {
     margin-top: 11px;
@@ -27,6 +28,10 @@ body {
 #main-container {
     margin-top: 48px; /* nav-container height */
     padding-top: 24px;
+    transition: 0.2s;
+}
+#main-container.pushed {
+    padding-top: 60px;
 }
 
 #main-header {
@@ -252,9 +257,13 @@ a:visited {
     color: white;
     text-decoration: none;
     border-radius: 2px;
+    margin: 0 auto;
 }
 .submit-button:visited {
     color: white;
+}
+.submit-button:hover {
+    cursor: pointer; cursor: hand;
 }
 
 .radio-horiz {
@@ -277,4 +286,21 @@ a:visited {
     height: 36px;
     text-align: center;
     padding-top: 9px;
+}
+
+#error-container {
+    position: fixed;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    color: #e64441;
+    top: 12px;
+    height: 36px;
+    text-align: center;
+    padding-top: 9px;
+    transition: 0.2s;
+    z-index: 100;
+}
+#error-container.active {
+    top: 48px;
 }
