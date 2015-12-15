@@ -33,8 +33,8 @@
       <div class="form-group" align="center">
         <label style="font-weight: 700;">Time Needed</label>
         <br><br>
-        <input type="number" placeholder="" class="number-input-box"> hr
-        <input type="number" placeholder="" class="number-input-box"> min
+        <input type="number" min=0 placeholder="" class="number-input-box"> hr
+        <input type="number" min=0 max=59 placeholder="" class="number-input-box"> min
       </div>
 
       <br><hr><br>
@@ -99,9 +99,9 @@
           <option value="2016">2016</option>
           
         </select>
-        <div style="height: 8px;display: block; width: 100%;"></div>
-        <input type="number" placeholder="" class="number-input-box" style="margin-right: 4px;">:
-        <input type="number" placeholder="" class="number-input-box">
+        <div style="height: 4px;display: block; width: 100%;"><br>
+        <input type="number" min=1 max=12 placeholder="" class="number-input-box" style="margin-right: 4px;">:
+        <input type="number" min=0 max=59 placeholder="" class="number-input-box">
         <select>
           <option>AM</option>
           <option>PM</option>
