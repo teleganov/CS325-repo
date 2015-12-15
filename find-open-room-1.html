@@ -20,8 +20,8 @@
       <div class="form-group" align="center">
         <label style="font-weight: 700;">Area of Campus</label>
         <br><br>
-        <input type="radio" name="area" value="north" class="radio-horiz" onclick="document.getElementById('submit-button').setAttribute('href', 'find-open-room-2-north.html')">North
-        <input type="radio" name="area" value="south" class="radio-horiz" onclick="document.getElementById('submit-button').setAttribute('href', 'find-open-room-2-south.html')">South
+        <input type="radio" name="area" value="north" class="radio-horiz" onclick="setCampusHalf('north');">North
+        <input type="radio" name="area" value="south" class="radio-horiz" onclick="setCampusHalf('south');">South
       </div>
 
       <br><hr><br>
@@ -151,20 +151,20 @@
         <form>
         <label style="font-weight: 700;">Board Type</label>
         <br>
-        <input type="radio" name="custom-options" value="blackboard" style="margin-top:5px;"> Blackboard
-        <input type="radio" name="custom-options" value="blackboard" style="margin-left:12px;"> Whiteboard<br><br>
+        <input type="radio" name="custom-options" value="blackboard" style="margin-top:5px;" onclick="setBoardType('blackboard');"> Blackboard
+        <input type="radio" name="custom-options" value="blackboard" style="margin-left:12px;" onclick="setBoardType('whiteboard');"> Whiteboard<br><br>
         </form>
         <form>
         <label style="font-weight: 700;">Table Type</label>
         <br>
-        <input type="radio" name="custom-options" value="blackboard" style="margin-top:5px;"> Tables
-        <input type="radio" name="custom-options" value="blackboard" style="margin-left:12px;"> Desks<br><br>
+        <input type="radio" name="custom-options" value="blackboard" style="margin-top:5px;" onclick="setTableType('tables');"> Tables
+        <input type="radio" name="custom-options" value="blackboard" style="margin-left:12px;" onclick="setTableType('desks');"> Desks<br><br>
         </form>
         <form>
         <label style="font-weight: 700;">AV Equipment</label>
         <br>
-        <input type="radio" name="custom-options" value="blackboard" style="margin-top:5px;"> Projector
-        <input type="radio" name="custom-options" value="blackboard" style="margin-left:12px;"> Television
+        <input type="radio" name="custom-options" value="blackboard" style="margin-top:5px;" onclick="setAVType('projector');"> Projector
+        <input type="radio" name="custom-options" value="blackboard" style="margin-left:12px;" onclick="setAVType('television');"> Television
         <br><br>
         </form><hr><br>
         <a href="find-open-room-2-north.html" id="submit-button" class="submit-button">Search</a>
@@ -183,6 +183,41 @@
 <a href="index.html">
   <div id="home-button"><img src="home-512px.svg" alt="Home" height="24" width="24"></div>
 </a>
+
+<script>
+  var campusHalf, boardType, tableType, avType;
+  function setCampusHalf(value){
+    campusHalf = value;
+    checkTypesAndChangeLink();
+  };
+  function setBoardType(value){
+    boardType = value;
+    checkTypesAndChangeLink();
+  };
+  function setTableType(value){
+    tableType = value;
+    checkTypesAndChangeLink();
+  };
+  function setAVType(value){
+    avType = value;
+    checkTypesAndChangeLink();
+  };
+  function checkTypesAndChangeLink(){
+    if(boardType == 'whiteboard' && tableType == 'tables' && avType == 'projector'){
+      if(campusHalf == 'north'){
+        document.getElementById('submit-button').setAttribute('href', 'find-open-room-2-north-selective.html');
+      } else {
+        document.getElementById('submit-button').setAttribute('href', 'find-open-room-2-south-selective.html');
+      }
+    } else {
+      if(campusHalf == 'north'){
+        document.getElementById('submit-button').setAttribute('href', 'find-open-room-2-north.html');
+      } else {
+        document.getElementById('submit-button').setAttribute('href', 'find-open-room-2-south.html');
+      }
+    }
+  };
+</script>
 
 </body>
 </html>
