@@ -471,6 +471,12 @@ hr {
     cursor: pointer;
     color: #e64441;
 }
+#toggle-advanced.active {
+    color: #777777;
+}
+#toggle-advanced.active:hover {
+    color: #e64441;
+}
 
 #advanced-options {
     height: 0px;
