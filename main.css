@@ -153,6 +153,13 @@ a:visited {
     text-decoration: none;
 }
 
+#map-campus-container {
+    background-image: url('google_map_campus.png');
+    width: 682px;
+    height: 776px;
+    display: inline-block;
+}
+
 #map-north-container {
     background-image: url('google_map_north.jpg');
     width: 1094px;
