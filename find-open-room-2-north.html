@@ -31,5 +31,15 @@
 <a href="index.html">
   <div id="home-button"><img src="home-512px.svg" alt="Home" height="24" width="24"></div>
 </a>
+
+<script>
+  var params = window.location.search;
+  if(params.length > 0) {
+    document.getElementById('map-compsci-button').setAttribute('href', 'building-inner-selective.html' + params);
+    document.getElementById('map-goessman-button').setAttribute('href', 'building-inner-selective.html' + params);
+    document.getElementById('map-isb-button').setAttribute('href', 'building-inner-selective.html' + params);
+  }
+</script>
+
 </body>
 </html>

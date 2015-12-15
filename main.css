@@ -298,9 +298,12 @@ a:visited {
     height: 36px;
     text-align: center;
     padding-top: 9px;
-    transition: 0.2s;
     z-index: 100;
 }
 #error-container.active {
     top: 48px;
+    transition: 0.2s;
+}
+#error-container.flash {
+    background-color: #e64441;
 }
