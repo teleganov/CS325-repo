@@ -48,10 +48,10 @@
 <script type="text/javascript">
   var params = window.location.search;
   function openInfo(room) {
-    document.getElementById('popup-header').innerText = 'Room ' + room;
-    if(getQueryVariable('boardType')) { document.getElementById('board-type').innerText = names[getQueryVariable('boardType')]; }
-    if(getQueryVariable('tableType')) { document.getElementById('table-type').innerText = names[getQueryVariable('tableType')]; }
-    if(getQueryVariable('avType')) { document.getElementById('av-type').innerText = names[getQueryVariable('avType')]; }
+    document.getElementById('popup-header').textContent = 'Room ' + room;
+    if(getQueryVariable('boardType')) { document.getElementById('board-type').textContent = names[getQueryVariable('boardType')]; }
+    if(getQueryVariable('tableType')) { document.getElementById('table-type').textContent = names[getQueryVariable('tableType')]; }
+    if(getQueryVariable('avType')) { document.getElementById('av-type').textContent = names[getQueryVariable('avType')]; }
     document.getElementById('popup-wrapper').setAttribute('class', 'active');
     document.getElementById('background-overlay').setAttribute('class', 'active');
   }
