@@ -144,32 +144,33 @@
 
 <script>
   var campusHalf, boardType, tableType, avType;
+  var params = window.location.search;
   function setCampusHalf(value){
     campusHalf = value;
     document.getElementById('error-container').setAttribute('class', '');
     document.getElementById('main-container').setAttribute('class', '');
-    checkTypesAndChangeLink();
   };
   function setBoardType(value){
     boardType = value;
-    checkTypesAndChangeLink();
+    checkTypesAndChangeLink('boardType', value);
   };
   function setTableType(value){
     tableType = value;
-    checkTypesAndChangeLink();
+    checkTypesAndChangeLink('tableType', value);
   };
   function setAVType(value){
     avType = value;
-    checkTypesAndChangeLink();
+    checkTypesAndChangeLink('avType', value);
   };
-  function checkTypesAndChangeLink(){
-
+  function checkTypesAndChangeLink(key, value){
+    params = updateQueryVariable(params, key, value);
+    console.log(params);
   };
   function searchClicked(){
     if(campusHalf == 'north') {
-      window.location.replace("find-open-room-2-north.html");
+      window.location.replace("find-open-room-2-north.html" + params);
     } else if(campusHalf == 'south') {
-      window.location.replace("find-open-room-2-south.html");
+      window.location.replace("find-open-room-2-south.html" + params);
     } else {
       document.getElementById('error-container').setAttribute('class', 'active');
       document.getElementById('main-container').setAttribute('class', 'pushed');
