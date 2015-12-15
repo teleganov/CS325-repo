@@ -3,7 +3,7 @@ html {
 }
 body {
     font-family: "Lato", sans-serif;
-    background-color: #e9e9e9;
+    background-color: #f0f0f0;
     color: #333;
 }
 
@@ -56,7 +56,7 @@ body {
     text-decoration: none;
     text-shadow: 0 1px 0 white;
     transition: 0.2s;
-    background-color: #f6f6f6;
+    background-color: #f9f9f9;
     padding-left: 48px;
 }
 .large-button:visited {
