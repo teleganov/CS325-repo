@@ -173,11 +173,25 @@ a:visited {
     height: 962px;
 }
 
+#map-class-container{
+    background-image: url('building-inner-class.png');
+    width: 812px;
+    height: 1024px;
+    display: inline-block;
+}
+
 .map-invis-button {
     display: inline-block;
     vertical-align: top;
     position: relative;
     background: none;
+}
+
+#map-class-button{
+    width:179px;
+    height:126px;
+    top:228px;
+    left:66px;
 }
 
 #map-compsci-button {
