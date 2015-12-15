@@ -34,7 +34,7 @@
 
 <script>
   var params = window.location.search;
-  if(params.length > 0) {
+  if(getQueryVariable('boardType') || getQueryVariable('avType') || getQueryVariable('tableType')) {
     document.getElementById('map-compsci-button').setAttribute('href', 'building-inner-selective.html' + params);
     document.getElementById('map-goessman-button').setAttribute('href', 'building-inner-selective.html' + params);
     document.getElementById('map-isb-button').setAttribute('href', 'building-inner-selective.html' + params);

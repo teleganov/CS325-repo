@@ -6,6 +6,7 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="normalize.css"/>
   <link rel="stylesheet" type="text/css" href="main.css"/>
+  <script type="text/javascript" src="app.js"></script>
 </head>
 
 <body style="background-color: white;">
@@ -15,13 +16,23 @@
 
 <div id="main-container" style="padding-top: 0;overflow:scroll">
   <div id="building-selective-container">
-    <div id="selective-110-button" class="map-invis-button" onclick="toggleInfo('110');"></div>
-    <div id="selective-113-button" class="map-invis-button" onclick="toggleInfo('113');"></div>
+    <div id="selective-110-button" class="map-invis-button" onclick="openInfo('110');"></div>
+    <div id="selective-113-button" class="map-invis-button" onclick="openInfo('113');"></div>
   </div>
 </div>
 
-<div id="room-info-popup">
+<div id="background-overlay" onclick="closeInfo()"></div>
 
+<div id="popup-wrapper">
+  <div id="popup-container">
+    <div id="popup-header">Room</div>
+    <div id="popup-content">
+      <div class="popup-item"><div class="bold">Board Type: </div><div id="board-type" class="value">Whiteboard</div></div>
+      <div class="popup-item"><div class="bold">Table Type: </div><div id="table-type" class="value">Desks</div></div>
+      <div class="popup-item"><div class="bold">AV Equipment: </div><div id="av-type" class="value">Television</div></div>
+      <div id="popup-ok" onclick="closeInfo()">OK</div>
+    </div>
+  </div>
 </div>
 
 <a href="help.html" id="question-button">?</a>
@@ -33,5 +44,22 @@
 <a href="index.html">
   <div id="home-button"><img src="home-512px.svg" alt="Home" height="24" width="24"></div>
 </a>
+
+<script type="text/javascript">
+  var params = window.location.search;
+  function openInfo(room) {
+    document.getElementById('popup-header').innerText = 'Room ' + room;
+    if(getQueryVariable('boardType')) { document.getElementById('board-type').innerText = names[getQueryVariable('boardType')]; }
+    if(getQueryVariable('tableType')) { document.getElementById('table-type').innerText = names[getQueryVariable('tableType')]; }
+    if(getQueryVariable('avType')) { document.getElementById('av-type').innerText = names[getQueryVariable('avType')]; }
+    document.getElementById('popup-wrapper').setAttribute('class', 'active');
+    document.getElementById('background-overlay').setAttribute('class', 'active');
+  }
+  function closeInfo() {
+    document.getElementById('popup-wrapper').setAttribute('class', '');
+    document.getElementById('background-overlay').setAttribute('class', '');
+  }
+</script>
+
 </body>
 </html>
