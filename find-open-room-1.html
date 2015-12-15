@@ -23,7 +23,6 @@
   <div class="container">
     <div class="form-group" align="center">
       <label style="font-weight: 700;">Area of Campus</label>
-      <br><br>
       <input type="radio" name="area" value="north" class="radio-horiz" onclick="setCampusHalf('north');">North
       <input type="radio" name="area" value="south" class="radio-horiz" onclick="setCampusHalf('south');">South
     </div>
@@ -32,7 +31,6 @@
 
     <div class="form-group" align="center">
       <label style="font-weight: 700;">Time Needed</label>
-      <br><br>
       <input type="number" min=0 placeholder="" class="number-input-box"> hr
       <input type="number" min=0 max=59 placeholder="" class="number-input-box"> min
     </div>
@@ -41,7 +39,6 @@
 
     <div class="form-group" align="center">
       <label style="font-weight: 700;">Specific Date</label>
-      <br><br>
       <select name="DOBMonth">
         <option> - Month - </option>
         <option value="January">January</option>
@@ -110,19 +107,19 @@
     </div>
     <form class="form-group" align="center">
       <label style="font-weight: 700;">Board Type</label>
-      <br>
+
       <input type="radio" name="custom-options" value="blackboard" style="margin-top:5px;" onclick="setBoardType('blackboard');"> Blackboard
       <input type="radio" name="custom-options" value="blackboard" style="margin-left:12px;" onclick="setBoardType('whiteboard');"> Whiteboard<br><br>
     </form>
     <form class="form-group" align="center">
       <label style="font-weight: 700;">Table Type</label>
-      <br>
+
       <input type="radio" name="custom-options" value="blackboard" style="margin-top:5px;" onclick="setTableType('tables');"> Tables
       <input type="radio" name="custom-options" value="blackboard" style="margin-left:12px;" onclick="setTableType('desks');"> Desks<br><br>
     </form>
     <form class="form-group" align="center">
       <label style="font-weight: 700;">AV Equipment</label>
-      <br>
+
       <input type="radio" name="custom-options" value="blackboard" style="margin-top:5px;" onclick="setAVType('projector');"> Projector
       <input type="radio" name="custom-options" value="blackboard" style="margin-left:12px;" onclick="setAVType('television');"> Television
       <br><br>
