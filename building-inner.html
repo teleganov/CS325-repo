@@ -14,6 +14,20 @@
   <div id="nav-title">Building Interior</div>
 </div>
 
+<div id="background-overlay" onclick="closeInfo()"></div>
+
+<div id="popup-wrapper">
+  <div id="popup-container">
+    <div id="popup-header">Room</div>
+    <div id="popup-content">
+      <div class="popup-item"><div class="bold">Board Type: </div><div id="board-type" class="value">Whiteboard</div></div>
+      <div class="popup-item"><div class="bold">Table Type: </div><div id="table-type" class="value">Desks</div></div>
+      <div class="popup-item"><div class="bold">AV Equipment: </div><div id="av-type" class="value">Television</div></div>
+      <div id="popup-ok" onclick="closeInfo()">OK</div>
+    </div>
+  </div>
+</div>
+
 <div id="main-container" style="padding-top: 0;">
   <div id="map-building-container">
     <div id="r110-button" class="map-invis-button" onclick="toggleInfo('110');"></div>
@@ -21,10 +35,6 @@
     <div id="r108-button" class="map-invis-button" onclick="toggleInfo('108');"></div>
     <div id="r103-button" class="map-invis-button" onclick="toggleInfo('103');"></div>
   </div>
-</div>
-
-<div id="room-info-popup">
-
 </div>
 
 <a href="help.html" id="question-button">?</a>
@@ -36,5 +46,27 @@
 <a href="index.html">
   <div id="home-button"><img src="home-512px.svg" alt="Home" height="24" width="24"></div>
 </a>
+
+<script type="text/javascript">
+  var params = window.location.search;
+  function openInfo(room) {
+    var data = {boardType: '', tableType: '', avType: ''};
+    document.getElementById('popup-header').textContent = 'Room ' + room;
+    if(room = '110') { data = {boardType: 'Blackboard', tableType: 'Desks', avType: 'Projector'}; }
+    if(room = '113') { data = {boardType: 'Whiteboard', tableType: 'Tables', avType: 'Television'}; }
+    if(room = '108') { data = {boardType: 'Blackboard', tableType: 'Desks', avType: 'Television'}; }
+    if(room = '103') { data = {boardType: 'Whiteboard', tableType: 'Tables', avType: 'Projector'}; }
+    document.getElementById('board-type').textContent = data['boardType'];
+    document.getElementById('table-type').textContent = data['tableType'];
+    document.getElementById('av-type').textContent = data['avType'];
+    document.getElementById('popup-wrapper').setAttribute('class', 'active');
+    document.getElementById('background-overlay').setAttribute('class', 'active');
+  }
+  function closeInfo() {
+    document.getElementById('popup-wrapper').setAttribute('class', '');
+    document.getElementById('background-overlay').setAttribute('class', '');
+  }
+</script>
+
 </body>
 </html>
