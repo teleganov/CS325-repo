@@ -458,3 +458,26 @@ hr {
     border: none;
     border-bottom: 1px solid #d5d5d5;
 }
+
+#toggle-advanced {
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+    transition: 0.2s;
+}
+#toggle-advanced:hover {
+    cursor: hand;
+    cursor: pointer;
+    color: #e64441;
+}
+
+#advanced-options {
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+#advanced-options.active {
+    height: 285px;
+}

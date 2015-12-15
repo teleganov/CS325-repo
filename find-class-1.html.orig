@@ -1,0 +1,123 @@
+<html>
+<head>
+  <title>FreeSpace</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+<div id="nav-container">
+  <div id="nav-title">Find a Class</div>
+</div>
+
+<div id="error-container">
+  Error: Please fill in all options
+</div>
+
+<div id="main-container">
+
+	<div class="container">
+		<form>
+			<div class="form-group" align="center">
+        <label style="font-weight: 700;">Course Subject</label>
+
+        <select onchange="setSubject(this.value)">
+          <option></option>
+          <option>Anthropology</option>
+          <option>Biology</option>
+          <option>Chinese</option>
+          <option>Computer Science</option>
+          <option>Economics</option>
+          <option>Food Studies</option>
+          <option>Geosciences</option>
+          <option>Hebrew</option>
+          <option>Journalism</option>
+          <option>Physics</option>
+        </select>
+			</div>
+
+			<br><hr><br>
+
+			<div class="form-group" align="center">
+        <label style="font-weight: 700;">Course Number: </label>
+        <select onchange="setNumber(this.value)">
+          <option></option>
+          <option>101</option>
+          <option>112</option>
+          <option>240</option>
+          <option>250</option>
+          <option>325</option>
+          <option>453</option>
+          <option>565</option>
+        </select>
+<<<<<<< HEAD
+=======
+        <br>
+>>>>>>> c19af986e7545334da995ff8e5a7f58f3ae8ae6e
+			</div>
+
+			<br><hr><br>
+
+      <div class="form-group" align="center">
+        <label style="font-weight: 700;">Section Number</label>
+        <select onchange="setSection(this.value)">
+          <option></option>
+          <option>1</option>
+          <option>2</option>
+        </select>
+        <br><br><hr><br>
+        <div id="submit-button" class="submit-button" onclick="searchClicked()">Find Class</a>
+        <br><br><br><br><br>
+			</div>
+		</form>
+	</div>
+
+</div>
+
+<a href="help.html" id="question-button">?</a>
+
+<a href="index.html">
+	<div id="back-button">&larr;</div>
+</a>
+
+<a href="index.html">
+	<div id="home-button"><img src="home-512px.svg" alt="Home" height="24" width="24"></div>
+</a>
+
+<script>
+  var subject, number, section;
+  var params = window.location.search;
+  function setSubject(value){
+    subject = value;
+    checkTypesAndChangeLink('subject', value);
+  };
+  function setNumber(value){
+    number = value;
+    checkTypesAndChangeLink('number', value);
+  };
+  function setSection(value){
+    section = value;
+    checkTypesAndChangeLink('section', value);
+  };
+  function checkTypesAndChangeLink(key, value){
+    params = updateQueryVariable(params, key, value);
+    console.log(params);
+    document.getElementById('error-container').setAttribute('class', '');
+    document.getElementById('main-container').setAttribute('class', '');
+  };
+  function searchClicked(){
+    if(subject && number && section) {
+      window.location.replace("building-compsci-class.html" + params);
+    } else {
+      document.getElementById('error-container').setAttribute('class', 'active');
+      document.getElementById('main-container').setAttribute('class', 'pushed');
+    }
+  };
+</script>
+
+</body>
+</html>
